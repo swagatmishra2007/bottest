@@ -1,0 +1,65 @@
+{
+    "class": "go.GraphLinksModel",
+    "linkFromPortIdProperty": "fromPort",
+    "linkToPortIdProperty": "toPort",
+    "modelData": {
+        "documentLocation": "http://localhost:3001/#!/Tasks/Greeting",
+        "treeViewOuterPanel": {
+            "width": 266.65
+        },
+        "editorPanel": {
+            "isEditorPaneVisible": true
+        },
+        "validationOuterPanel": {
+            "height": 20,
+            "isValidationPaneVisible": false
+        }
+    },
+    "nodeDataArray": [
+        {
+            "name": "responseState1",
+            "dialogFlow": "dialogFlow1",
+            "agentDefinition": "en-us",
+            "key": "68ff577c-efff-4dd4-93b1-084dca69d97d",
+            "category": "Feedback",
+            "loc": "105 24"
+        },
+        {
+            "name": "module1",
+            "dialogFlow": "DialogFlow2",
+            "agentDefinition": "en-us",
+            "task": "task1",
+            "key": "c826ab62-f59c-424b-9256-1462f7cbebcc",
+            "category": "Module",
+            "loc": "96 24"
+        },
+        {
+            "name": "promptState2",
+            "dialogFlow": "DialogFlow2",
+            "agentDefinition": "en-us",
+            "task": "task1",
+            "key": "7f4bebfe-7214-4efa-8713-8a3bfa452bfa",
+            "category": "Prompt",
+            "loc": "320 80"
+        },
+        {
+            "name": "Prompt",
+            "category": "Prompt",
+            "key": "1ca5af5c-b3c8-4311-899c-415938cea74e",
+            "loc": "330 270",
+            "agentDefinition": "en-us",
+            "task": "task1",
+            "dialogFlow": "DialogFlow2"
+        },
+        {
+            "name": "Feedback",
+            "category": "Feedback",
+            "key": "ecba011b-21cf-49f0-b17f-b576c4ddb40a",
+            "loc": "650 170",
+            "agentDefinition": "en-us",
+            "task": "task1",
+            "dialogFlow": "DialogFlow2"
+        }
+    ],
+    "linkDataArray": []
+}

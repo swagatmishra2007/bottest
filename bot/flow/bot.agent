@@ -1,0 +1,39 @@
+<Agent xmlns="http://schemas.microsoft.com/ConversationalAgent/1.1">
+  <AgentDefinition lang="en-us">
+    <Task name="Welcome message" triggerType="ConversationUpdateRecognizer" doAction="Respond">
+      <ConversationUpdateRecognizer onRun="Welcomemessage_convoUpdate_if_onRun"></ConversationUpdateRecognizer>
+      <Respond name="Respond">
+        <FeedbackPerModality>
+          <Speak>Replace this message by editing the Welcome Message task</Speak>
+          <Display>\&lt;Replace this message by editing the Welcome Message task&gt;</Display>
+        </FeedbackPerModality>
+      </Respond>
+    </Task>
+    <Task name="Greeting" triggerType="LUISRecognizer" doAction="Respond">
+      <LUISRecognizer intentId="708aa46d-68de-49f7-ae07-c8aba6ef5739" intentName="Greeting" appID="94a05322-409b-4e28-9c73-a8f083e23d6b"></LUISRecognizer>
+      <Respond name="Respond">
+        <FeedbackOneOf>
+          <FeedbackPerModality>
+            <Speak>Hello, insert things your bot can do</Speak>
+            <Display>Hello, \&lt;insert things your bot can do&gt;</Display>
+          </FeedbackPerModality>
+          <Feedback>Hello</Feedback>
+          <Feedback>Hi, I&apos;m a bot</Feedback>
+        </FeedbackOneOf>
+      </Respond>
+    </Task>
+    <Task name="Fallback" triggerType="CodeRecognizer" doAction="Process">
+      <CodeRecognizer onRun="Fallback_if_onRun"></CodeRecognizer>
+      <Process name="Process" onRun="Fallback_response"></Process>
+      <Respond name="Respond">
+        <FeedbackOneOf>
+          <FeedbackPerModality>
+            <Speak>Hmm, I don&apos;t understand that. Insert things I can do</Speak>
+            <Display>Hmm, I don&apos;t understand that. \&lt;Insert things I can do&gt;</Display>
+          </FeedbackPerModality>
+          <Feedback>Sorry I did not understand that. I respond to greeting messages.</Feedback>
+        </FeedbackOneOf>
+      </Respond>
+    </Task>
+  </AgentDefinition>
+</Agent>
