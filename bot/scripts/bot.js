@@ -22,12 +22,3 @@ module.exports.Welcomemessage_convoUpdate_if_onRun = function (context) {
     if(context.request.membersAdded[0].name === "Bot" || context.request.membersAdded[0].name === "You") return false;
     return true;
 };
-
-
-/**
-* @param {IConversationContext} context
-* @returns void | Promise<void> nothing or a promise if an async operation is involved
-*/
-module.exports.Fallback_response = function (context) {
-    context.responses.push({text: 'some reply must be given'});
-};

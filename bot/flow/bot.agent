@@ -22,9 +22,8 @@
         </FeedbackOneOf>
       </Respond>
     </Task>
-    <Task name="Fallback" triggerType="CodeRecognizer" doAction="Process">
+    <Task name="Fallback" triggerType="CodeRecognizer" doAction="Respond">
       <CodeRecognizer onRun="Fallback_if_onRun"></CodeRecognizer>
-      <Process name="Process" onRun="Fallback_response"></Process>
       <Respond name="Respond">
         <FeedbackOneOf>
           <FeedbackPerModality>

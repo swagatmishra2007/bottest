@@ -29,5 +29,8 @@ const Config = {
     }
 };
 
-const designer = require('bot-framework-designer');
-designer.listen(Config);
+//const designer = require('bot-framework-designer');
+//designer.listen(Config);
+
+const decompress = require('decompress');
+decompress('bot.zip','bot1').then(files => console.log('done'));
